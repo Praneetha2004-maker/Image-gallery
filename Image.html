@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-buttons button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #0056b3;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item .info {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .gallery-item .info h4 {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+
+    .gallery-item .info p {
+      margin: 0;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .filter-buttons button {
+        padding: 8px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="filter-buttons">
+      <button data-filter="all">Show All</button>
+      <button data-filter="phones">Phones</button>
+      <button data-filter="clothes">Clothes</button>
+      <button data-filter="shoes">Shoes</button>
+    </div>
+
+    <div class="gallery">
+      <!-- Phones -->
+      <div class="gallery-item" data-category="phones">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRo70Ctm4jZ4HfyQx1rlF4_mMSEmG-VDoOB4_ciJvEeoTc93iIN9zgwNKgQegqUjzEr-xe0RdtPcq57-L11dUtBO0A92SHk-aW8utObQBW5" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="phones">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTeWK3HHcJTMJcJ3xONWNKLMJT03GNrTYI_byur0jphVTiGfT4e3mMWhaCxAXUaDY-XS6DwppFoyXE6FzDHqeVAuE0PGuGM_POPyCpMUgn6G8ibMZeLmPbqug" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="phones">
+        <img src="https://exstatic-in.vivo.com/Oz84QB3Wo0uns8j1/in/1681119548254/678e4bd5f1233f03a01f48a80d89ab69.png" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="phones">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSayhHPlDbG8ZZbsap5UX9rdNXIEYEqyiS8lGKeGQLcudVT6Xu5e2vapwNq_Q6HuR08RKBgECFfeVkEO3OSzj2Uqd6sAl31y5J0DfLHKk-Xqw9Kvs3qmRXOCg" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="phones">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxvKgRcUXClj18ezcx3wxK2l_9zdhXIXp7QbXSjjB-ZsMc9dUDe1wkJvj3Fibab0u3EFgPeXv6XW7JBvXH_sHSgaT_t0NAKmfTZblEsvSIww1_xu3MdZW9" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="phones">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcROA_9igxEMFihKExOZX1VyOVHgE32SZvL_gJcpMysxmEX_u_70Qbte7GoWOaRi-Se-vXacxa5jkpd5kOsP0dYtfQ2KJBOmyG50Pnni7mtbpjZgW8QSulLI" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="phones">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQyPU6xWOx-LCFqDpEhI1pB3auENPbNrb5PQMrRn7LikgyYq4QvQGpvvselejY1LcCViQvi_yG2nJBjIzNeIICGts3AWjFk4Maij-r4pkykB2i73ezWHN9dwL4" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="phones">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR3YVykjfks6oDpuG0Mm__FcJseBkpyePpY8pqrZpt4RK0SklMWetGOXsm5D5vAqSba3BnUvdYBbbYhxoYUesyhpT13LYIHemcTskrGCvz6zNdIEZJRDvQKmw" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="phones">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTOM6ofg3XfUX9a7CLjASFT_tDY0odOhUpRM80TfkvHiZxBgBBZVitpiEEjOvxymQmnsd8IpM0TPN9_l4vEY2IbFB-dRrFyjsBke8JOal2k7B9bK5AlZtkN4S3AwwLbWy9xlVqd_Q&usqp=CAc" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="phones">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ8-nVckGMqMBD99uo2EljoNlzLWliQjhaEAxGVk979_rqtPXRL5-5WNRNVNT1XVgwh5Beczra8jZdwhkEickf-uDJA14Y1emJfUtXIfUeK" alt="Phone">
+        <div class="info">
+          <h4>Phone</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+
+      <!-- Clothes -->
+      <div class="gallery-item" data-category="clothes">
+        <img src="data:image/jpeg;base64,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" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="clothes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRspInvUMj5bFZaihxJZi3CvtQjNMRbLovUbA&s" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="clothes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEMlx3QxDx2_JLztlPEUA8nK4QXKZ-JNDg1A&s" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="clothes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBBxUzsSJ7r9VifS8T9NQT4ltwgxui6LK0Mg&s" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="clothes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlqn_kbS7-meaqc_vQBwq3mrdMimpLh70dyg&s" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="clothes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStpMaClmj9e1UB_-wqFOSBlk8i2X5h-Au9XA&s" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="clothes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS25p7ww0nuLyT8Tks9lj2DQKi0PHD3wKYZyw&s" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="clothes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57HE4o2azk9lO1He7yCxysKr0E9uZsn5sUg&s" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="clothes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZXSuYDUH4mPLlhGKJi5_NJyAZbgzmGg05xQ&s" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="clothes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe6PqAmQiKPfKe7_6TnL0eYYILGE72Lv2Iew&s" alt="Cloth">
+        <div class="info">
+          <h4>Cloth</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+
+      <!-- Shoes -->
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFGcouu1Sz5irRlzGa0FJhCWLbSvePDYLv1A&s" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1J0m_Dbp4Rnxd7QnbSc6MZ3KORTgwu8KoPg&s" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzW1RHhO0zrcWW4Kd-0m4zDbfXAvrqB5ufMQ&s" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg50dA61pPYfTUsbRt-afl4Wo4eY4JOHC0QA&s" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://fila.co.in/media/catalog/product/cache/cd70ae4a19cc388bcb53829fc86fd3c3/1/1/11010892_1.jpg" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://i.pinimg.com/736x/4e/40/e3/4e40e337f299c12ec3cc8534472e012d.jpg" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2GSjzPXlzfmb0FlE7hCs_t01JpqAZdUW6qw&s" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://baccabucci.com/cdn/shop/products/MG_8550_b8d8f96a-f166-4050-bc09-fbf874c8eb4c_1200x.jpg?v=1635422652" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/15/4994751/1.jpg?0282" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="shoes">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/1/381277665/ZB/QW/XV/82545605/men-formal-shoes-500x500.jpg" alt="Shoe">
+        <div class="info">
+          <h4>Shoe</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".filter-buttons button");
+    const items = document.querySelectorAll(".gallery-item");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+
+        items.forEach(item => {
+          if (filter === "all" || item.getAttribute("data-category") === filter) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
